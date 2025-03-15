@@ -1,26 +1,26 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
 export const Colors = {
+  WHITE: "#ffffff",
+  PRIMARY: "#000000",
+  GRAY: "#7d7d7d",
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    background: "#F9FAFC", // Soft, clean white with a hint of blue
+    text: "#1E1E1E", // Deep, modern gray for high readability
+    tint: "#6366F1", // Soft but vibrant blue-violet (modern UI feel)
+    tabIconDefault: "#A0AEC0", // Muted gray for inactive icons
+    tabIconSelected: "#6366F1", // Same as tint for active tab
+    card: "#FFFFFF", // Pure white for contrast
+    border: "#E2E8F0", // Soft grayish-blue for subtle separation
+    shadow: "rgba(0, 0, 0, 0.1)", // Light shadow for depth
   },
+
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    background: "#1A1B1E", // Dark but slightly warm black
+    text: "#E5E7EB", // Soft off-white for eye comfort
+    tint: "#818CF8", // Muted electric blue-violet
+    tabIconDefault: "#6B7280", // Desaturated gray for inactive icons
+    tabIconSelected: "#818CF8", // Active tab color
+    card: "#25262B", // Dark gray with a soft contrast
+    border: "#3B3F45", // Darker gray for borders
+    shadow: "rgba(0, 0, 0, 0.5)", // Darker shadow for depth
   },
 };
