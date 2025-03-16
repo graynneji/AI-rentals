@@ -82,6 +82,7 @@ export default function index() {
         </Text>
         <TextInput
           onChangeText={(value) => setFullname(value)}
+          placeholderTextColor={Colors.GRAY}
           style={styles.input}
           placeholder="Enter your fullname"
         />
@@ -103,6 +104,7 @@ export default function index() {
         </Text>
         <TextInput
           style={styles.input}
+          placeholderTextColor={Colors.GRAY}
           onChangeText={(value) => setEmail(value)}
           placeholder="Enter your email"
         />

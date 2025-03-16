@@ -187,5 +187,6 @@ const styles = StyleSheet.create({
     borderColor: Colors.GRAY,
     paddingLeft: 10,
     fontFamily: "opensans-regular",
+    fontSize: 15,
   },
 });

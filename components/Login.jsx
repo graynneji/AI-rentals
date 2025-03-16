@@ -25,15 +25,16 @@ export default function Login() {
         <Text
           style={{
             fontSize: 30,
-            fontFamily: Platform.select({
-              ios: "bagoss-bold",
-              android: "opensans-extrabold",
-            }),
+            fontFamily: "bagoss-bold",
+            // fontFamily: Platform.select({
+            //   ios: "bagoss-bold",
+            //   android: "opensans-extrabold",
+            // }),
             textAlign: "center",
             marginTop: 10,
           }}
         >
-          AI Travel Planner
+          AI place discovery
         </Text>
         <Fontisto
           style={{

@@ -1,7 +1,7 @@
 import "react-native-get-random-values";
 import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigation } from "expo-router";
+import { useNavigation, useRouter } from "expo-router";
 import { Colors } from "../../constants/Colors";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
@@ -15,8 +15,8 @@ import { CreateTripContext } from "../../context/MyTripContext";
 
 export default function SearchPlace() {
   const navigation = useNavigation();
-  const [query, setQuery] = useState();
-  const [places, setPlaces] = useState();
+  // const [query, setQuery] = useState();
+  // const [places, setPlaces] = useState();
 
   // const searchPlaces = async (text) => {
   //   setQuery(text);
@@ -36,6 +36,7 @@ export default function SearchPlace() {
   //   }
   // };
   const { tripData, setTripData } = useContext(CreateTripContext);
+  const router = useRouter();
   useEffect(() => {
     navigation.setOptions({
       headerShown: true,
@@ -51,6 +52,11 @@ export default function SearchPlace() {
       //   ),
     });
   }, []);
+
+  useEffect(() => {
+    console.log(tripData);
+  }, [tripData]);
+
   return (
     <View
       style={{
@@ -61,7 +67,7 @@ export default function SearchPlace() {
       }}
     >
       <GooglePlacesAutocomplete
-        placeholder="Search"
+        placeholder="Search Place..."
         minLength={3}
         fetchDetails={true}
         onPress={(data, details = null) => {
@@ -82,12 +88,24 @@ export default function SearchPlace() {
               url: details?.photos[0]?.photo_reference,
             },
           });
+
+          router.push("/create-trip/select-traveler");
         }}
         query={{
           key: "AIzaSyAR-kS8e4f97UuvaAg6nYuoYZ9H-moxhOE",
           language: "en",
         }}
+        styles={{
+          textInputContainer: {
+            borderWidth: 1,
+            borderRadius: 10,
+            marginTop: 25,
+            borderColor: "#999",
+            padding: 7,
+          },
+        }}
       />
+
       {/* <View style={{ paddingTop: 30 }}>
         <TextInput
           placeholder="Search location..."

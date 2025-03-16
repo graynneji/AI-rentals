@@ -48,7 +48,7 @@ export default function StartNewTripCard() {
         <Text
           style={{
             color: Colors.WHITE,
-            fontFamily: "opensans-medium",
+            fontFamily: "opensans-bold",
             fontSize: 17,
           }}
         >
